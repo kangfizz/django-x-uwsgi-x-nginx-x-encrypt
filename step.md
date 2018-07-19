@@ -25,3 +25,17 @@
 https://imliyan.com/blogs/article/%E4%BD%BF%E7%94%A8Let%27s%20Encrypt%E9%83%A8%E7%BD%B2TLS%E8%AF%81%E4%B9%A6/  
 
 (最後重啟 <code> sudo systemctl restart nginx </code>)
+
+## 額外1. 將http 轉址為 https
+
+https://bjornjohansen.no/redirect-to-https-with-nginx  
+
+````
+server {
+    listen 80;
+    listen [::]:80;
+    server_name ayano-squirrel www.MYDOMAIN.com;
+
+    return 301 https://www.MYDOMAIN.com;
+}
+````
