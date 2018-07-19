@@ -34,8 +34,9 @@ https://bjornjohansen.no/redirect-to-https-with-nginx
 server {
     listen 80;
     listen [::]:80;
-    server_name MYDOMAIN www.MYDOMAIN.com;
+    server_name MYDOMAIN www.MYDOMAIN;
 
-    return 301 https://www.MYDOMAIN.com;
+    return 301 https://www.MYDOMAIN;
 }
 ````
+(MYDOMAIN包含.com etc.)
